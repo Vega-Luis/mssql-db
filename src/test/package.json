@@ -1,0 +1,15 @@
+{
+  "name": "xml-data-generator",
+  "version": "1.0.0",
+  "description": "Generates data for the data base proves",
+  "main": "xmlGenerator.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./test/xmlGenerator.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
