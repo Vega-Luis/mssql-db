@@ -1,0 +1,2 @@
+TRUNCATE TABLE dbo.Article;
+TRUNCATE TABLE dbo.[User];
