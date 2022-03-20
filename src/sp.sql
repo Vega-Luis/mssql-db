@@ -90,11 +90,22 @@ BEGIN
 	SET NOCOUNT ON;
 	SET @outResult = 0;
 
-	SELECT TOP(@inAmount)
-		A.[Name]
-		, A.Price
-	FROM dbo.Article A
-	ORDER BY NAME
+	IF @inAmount IS NULL OR (@inAmount = '')
+	BEGIN
+		SELECT TOP(1000)
+			A.[Name]
+			, A.Price
+		FROM dbo.Article A
+		ORDER BY Name
+	END
+	ELSE
+	BEGIN 
+		SELECT TOP(@inAmount)
+			A.[Name]
+			, A.Price
+		FROM dbo.Article A
+		ORDER BY NAME
+	END
 
 	SET NOCOUNT OFF;
 END;
